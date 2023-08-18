@@ -1,0 +1,416 @@
+*{
+    list-style-type: none;
+}
+body {
+    margin: 0;
+}
+
+.main {
+    background-color: red;
+    width: 1525px;
+    height: 80px;
+}
+
+/*.c1 #location {
+    color: red;
+    display: block;
+    padding: 0 15px;
+    line-height: 70px;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.c1 #location :hover,
+.c1 #location.active {
+    color: #0dd1d1;
+}
+
+.c1 #location ul {
+    position: absolute;
+    top: 85px;
+    border-top: 3px solid #23dbdb;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.c1 #location:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+}
+
+.c1 #location ul li {
+    width: 150px;
+    display: list-item;
+    position: relative;
+    border: 1px solid red;
+    border-top: none;
+}
+
+.c1 #location ul li a {
+    line-height: 50px;
+}
+
+.c1 #location ul ul {
+    border-top: none;
+}
+
+.c1 #location ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+.c1 #location ul li a i {
+    margin-left: 45px;
+}
+
+ul {
+    float: right;
+}
+
+ul li {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 50px 2px 8px 9px;
+    transition: 0.2s ease;
+}
+
+ul li a:hover {
+    background-color: grey;
+    color: white;
+}*/
+.icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.icon a {
+    display: block;
+    width: 200px;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.icon a:hover {
+    background-color: grey;
+}
+
+.logo ul li:hover .location-content ul {
+    width: 100px;
+}
+
+.navbar {
+    text-align: center;
+    z-index: 999;
+    overflow: show;
+    position: relative;
+}
+
+.menu {
+    display: inline-block;
+}
+
+.menu>li {
+    float: left;
+    color: white;
+    width: 240px;
+    height: 40px;
+    line-height: 40px;
+    background: black;
+    font-size: 17px;
+}
+.menu li:hover{
+    background-color: grey;
+}
+.sub-menu {
+    transform: scale(0);
+    transform-origin: top center;
+    transition: all 300ms ease-in-out;
+}
+
+.sub-menu li {
+    font-size: 20px;
+    background: black;
+    width: 140px;
+    padding: 8px 45px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transform: scale(0);
+    transform-origin: top center;
+    transition: all 300ms ease-in-out;
+    border: solid 1px white;
+}
+
+.sub-menu li:last-child {
+    border-bottom: 0;
+    border: solid 1px white;
+}
+
+.sub-menu li:hover {
+    background: grey;
+}
+
+.menu>li:hover .sub-menu li {
+    transform: scale(1);
+}
+
+.menu>li:hover .sub-menu {
+    transform: scale(1);
+}
+
+.sub-sub-menu {
+    transform: scale(0);
+    transform-origin: top center;
+    transition: all 300ms ease-in-out;
+}
+
+.sub-sub-menu li {
+    font-size: 20px;
+    background: black;
+    width: 140px;
+    padding: 8px 45px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transform: scale(0);
+    transform-origin: top center;
+    transition: all 300ms ease-in-out;
+    border: solid 1px white;
+    float: none;
+    display: block;
+}
+
+.sub-sub-menu li:last-child {
+    border-bottom: 0;
+    border: solid 1px white;
+}
+
+.sub-sub-menu li:hover {
+    background: grey;
+}
+
+.sub-menu>li:hover .sub-sub-menu li {
+    transform: scale(1);
+}
+
+.sub-menu>li:hover .sub-sub-menu {
+    transform: scale(1);
+}
+
+.logo img {
+    float: left;
+    width: 200px;
+    height: 60px;
+    padding: 10px 5px;
+}
+
+i {
+    margin-right: 8px;
+}
+
+.c1 {
+    width: 100%;
+    background-color: black;
+    overflow: auto;
+}
+
+.blank {
+    height: 30px;
+}
+
+div#blur.active {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    background-color: black;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 6);
+    animation: scroll 40s linear infinite;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 3));
+    }
+}
+
+.slide {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+img {
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+img:hover {
+    transform: translateZ(20px);
+}
+
+.slider::before,
+.slider::after {
+    /*background: linear-gradient(to right, rgba(255, 255, 255, 1)0%, rgba(255, 255, 255, 0)100%);*/
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.genre {
+    height: 50px;
+    background-color: white;
+}
+
+.genre-container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: auto;
+    padding-left: 70px;
+    padding-top: 10px;
+}
+
+.gallery {
+    margin: 1px;
+    float: left;
+    width: 150px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.desc {
+    text-align: center;
+    color: white;
+}
+
+.part1 {
+    padding-left: 70px;
+    display: inline-block;
+    height: 40px;
+}
+
+.blank1 {
+    height: 20px
+}
+
+.part4 {
+    display: inline-block;
+}
+
+.event-container {
+    max-width: 1200px;
+}
+
+.events {
+    margin: 1px;
+    float: left;
+    width: 350px;
+    height: 340px;
+    border: 1px solid black;
+    margin-right: 50px;
+    box-shadow: 10px 10px 5px rgb(215, 209, 209);
+    border-radius: 10px;
+}
+
+span {
+    color: white;
+}
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    ;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.events:hover .image {
+    opacity: 0.6;
+}
+
+.events:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: rgb(41, 153, 191);
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+.event-part {
+    height: 200px;
+    overflow: hidden;
+    display: inline-block;
+}
